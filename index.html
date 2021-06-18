@@ -18,148 +18,193 @@
   </header>
   <main class="section">
     <form
+      class="section__form"
       action="https://ksk.ru/test"
       method="post"
     >
-      <input
-        class="section__button"
-        type="button"
-        value="Добавить"
-        tabindex="1"
-      >
-      <div class="section__sorting">
+      <div class="section__wrapper">
         <input
-          type="text"
-          list="widgets"
-          name="widget"
-          tabindex="2"
-        >
-        <datalist
-          id="widgets"
-          tabindex="3"
-        >
-          <option value="Sort by ID: ascending">
-          </option>
-          <option value="Sort by ID: descending">
-          </option>
-          <option value="Sort by Date of creation: ascending">
-          </option>
-          <option value="Sort by Date of creation: descending">
-          </option>
-          <option value="Sort by Order type: ascending">
-          </option>
-          <option value="Sort by Order type: descending">
-          </option>
-        </datalist>
-        <label>
-          <input
-            type="checkbox"
-            name="allow"
-            tabindex="4"
-          >
-          Enable drag and drop
-        </label>
-        <input
-          class="sorting__button"
+          class="section__button"
           type="button"
-          value="Add"
-          tabindex="5"
+          value="Добавить"
+          tabindex="1"
         >
-       </div>
-      <div class="section__filter">
-        <legend>
-          Filters
-        </legend>
-
-        <label for="id-widget">
-          ID
-        </label>
-        <input
-          type="text"
-          id="id-widget"
-          name="id-widget"
-          placeholder="Enter value"
-          tabindex="6"
-        >
-        <label for="invoice-number">
-          Invoice number
-        </label>
-        <input
-          type="text"
-          id="invoice-number"
-          name="invoice-number"
-          placeholder="Enter value"
-          tabindex="7"
-        >
-        <fieldset>
-          <legend>
-            Time of arrival for unloading
+        <div class="section__sorting">
+          <input
+            class="section__sorting-input"
+            type="text"
+            list="widgets"
+            name="widget"
+            tabindex="2"
+          >
+          <datalist
+            class="section__sorting-datalist"
+            id="widgets"
+            tabindex="3"
+          >
+            <option value="Sort by ID: ascending">
+            </option>
+            <option value="Sort by ID: descending">
+            </option>
+            <option value="Sort by Date of creation: ascending">
+            </option>
+            <option value="Sort by Date of creation: descending">
+            </option>
+            <option value="Sort by Order type: ascending">
+            </option>
+            <option value="Sort by Order type: descending">
+            </option>
+          </datalist>
+          <label class="section__sorting-title">
+            <input
+              class="section__sorting-checkbox"
+              type="checkbox"
+              name="allow"
+              tabindex="4"
+            >
+            Enable drag and drop
+          </label>
+          <input
+            class="section__sorting-button"
+            type="button"
+            value="Add"
+            tabindex="5"
+          >
+         </div>
+        <div class="section__filter">
+          <legend class="section__filter-legend">
+            Filters
           </legend>
-          <div class="filter__from">
-            <label for="time-arrival-from">
-              from
-            </label>
-            <input
-              type="date"
-              id="time-arrival-from"
-              name="time-arrival-from"
-              tabindex="8"
-            >
-          </div>
-          <div class="filter__by">
-            <label for="time-arrival-by">
-              by
-            </label>
-            <input
-              type="date"
-              id="time-arrival-by"
-              name="time-arrival-by"
-              tabindex="9"
-            >
-          </div>
-        </fieldset>
+          <label
+            for="id-widget"
+            class="section__filter-input-label"
+          >
+            ID
+          </label>
+          <input
+            class="section__filter-input"
+            type="text"
+            id="id-widget"
+            name="id-widget"
+            placeholder="Enter value"
+            tabindex="6"
+          >
+          <label
+            for="invoice-number"
+            class="section__filter-input-label"
+          >
+            Invoice number
+          </label>
+          <input
+            class="section__filter-input"
+            type="text"
+            id="invoice-number"
+            name="invoice-number"
+            placeholder="Enter value"
+            tabindex="7"
+          >
+          <fieldset class="section__filter-fieldset">
+            <legend class="section__filter-input-label">
+              Time of arrival for unloading
+            </legend>
+            <div class="section__filter-from">
+              <label
+                for="time-arrival-from"
+                class="section__filter-from-label"
+              >
+                from
+              </label>
+              <input
+                class="section__filter-from-input"
+                type="date"
+                id="time-arrival-from"
+                name="time-arrival-from"
+                tabindex="8"
+              >
+            </div>
+            <div class="section__filter-from">
+              <label
+                for="time-arrival-by"
+                class="section__filter-from-label"
+              >
+                by
+              </label>
+              <input
+                class="section__filter-from-input"
+                type="date"
+                id="time-arrival-by"
+                name="time-arrival-by"
+                tabindex="9"
+              >
+            </div>
+          </fieldset>
 
-        <label for="order-type">
-          Order type
-        </label>
-        <input
-          type="text"
-          id="order-type"
-          name="order-type"
-          list="order-types"
-          tabindex="10"
-        >
-        <datalist
-          id="order-types"
-          tabindex="11"
-        >
-          <option value="RUED">
-          </option>
-          <option value="RUEX">
-          </option>
-          <option value="RUSG">
-          </option>
-        </datalist>
-      </div>
-      <div class="section__cards">
-        <div class="card">
-          <div class="card__title">
-            <a>
-            </a>
-          </div>
-          <div class="card__field">
-            <input
+          <label
+            for="order-type"
+            class="section__filter-input-label"
+          >
+            Order type
+          </label>
+          <input
+            class="section__filter-input"
+            type="text"
+            id="order-type"
+            name="order-type"
+            list="order-types"
+            tabindex="10"
+          >
+          <datalist
+            class="section__filter-input-datalist"
+            id="order-types"
+            tabindex="11"
+          >
+            <option value="RUED">
+            </option>
+            <option value="RUEX">
+            </option>
+            <option value="RUSG">
+            </option>
+          </datalist>
+        </div>
+        <div class="section__card-wrapper">
+          <div class="section__card section__card-one">
+            <div class="section__card-title">
+              Card
+            </div>
+            <div class="section__card-field">
+              <input
+                class="section__card-input section__card-input-id"
+                type="text"
+                name="id-widget"
+                value=""
+                disabled
+              >
+              <input
+                class="section__card-input section__card-input-date"
+                type="text"
+                name="date"
+                value=""
+                disabled
+              >
+              <input
+              class="section__card-input section__card-input-number"
               type="text"
-              name="id-widget"
-              value=""
-              disabled
-            >
-            <input
+              name="invoice-number"
+              >
+              <input
+              class="section__card-input section__card-input-time"
               type="text"
               name="time-arrival-from"
               value=""
               disabled
+              >
+              <input
+              class="section__card-input section__card-input-type"
+              type="text"
+              name="order-type"
+              value=""
             >
+            </div>
           </div>
         </div>
       </div>

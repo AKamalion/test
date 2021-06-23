@@ -14,12 +14,12 @@
     <h1 class="header__title">Тестовое задание</h1>
   </header>
   <main class="section">
-    <div class="section__wrapper">
-      <form
-        class="section__form"
-        action="#"
-        method="post"
-      >
+    <form
+      class="section__form"
+      action="#"
+      method="post"
+    >
+      <div class="section__wrapper">
         <div class="section__wrapper-left-column">
           <input
             class="section__add-button"
@@ -112,6 +112,7 @@
               id="order-type"
               name="order-type"
               list="order-types"
+              placeholder="RUED"
             >
             <datalist
               class="section__filter-input-datalist"
@@ -172,11 +173,16 @@
                 <p>
                   Card
                 </p>
+                <button
+                  type="button"
+                  class="section__card-button"
+                >
+                </button>
                 <select class="section__card-menu">
                   <option
-                    class="section__card-edit"
-                    value="edit"
-                    href="#"
+                  class="section__card-edit"
+                  value="edit"
+                  href="#"
                   >
                     редактировать
                   </option>
@@ -464,8 +470,8 @@
             </li>
           </ul>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
   </main>
   <footer class="footer">
   </footer>

@@ -43,8 +43,8 @@
 }
 .section__wrapper {
   display: flex;
-  justify-content: space-between;
-  padding: 30px 120px;
+  flex-wrap: nowrap;
+  padding-top: 30px;
 }
 .section__wrapper-left-column {
   display: flex;
@@ -55,6 +55,7 @@
   display: flex;
   justify-content: space-between;
   flex-flow: column;
+  flex-wrap: wrap;
 }
 .section__add-button {
   width: 280px;
@@ -126,6 +127,7 @@
   width: 220px;
   height: 30px;
   margin-top: 11px;
+  padding-left: 10px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -229,19 +231,18 @@
 }
 .section__card-wrapper {
   width: 910px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   padding: 0px;
   list-style-type: none;
 }
 .section__card {
-  width: 260px;
+  width: 290px;
   height: 210px;
-  padding: 15px;
   background: #F6FAFB;
   box-shadow: 0px 4px 12px #EBEBEB;
   border-radius: 3px;
+  box-sizing: border-box;
 }
 .section__card-title {
   display: flex;
@@ -255,6 +256,18 @@
   font-size: 18px;
   line-height: 21px;
   background: rgba(237, 232, 245, 0.5);
+}
+.section__card-button {
+  background: url('../icon/move.png') no-repeat;
+  border: none;
+}
+.section__card-edit::before {
+  background: url('../icon/edit.png') no-repeat scroll 14px 14px;
+  padding-left: 10px;
+}
+.section__card-delete::before {
+  background: url('../icon/close.png') no-repeat scroll 14px 14px;
+  padding-left: 10px;
 }
 .section__card-field {
   font-family: Roboto;
